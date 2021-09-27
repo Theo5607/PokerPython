@@ -11,8 +11,9 @@ while True:
     conn, adress = socket.accept()
     print("en écoute")
     
-    data = socket.recv(1024)
+    data = conn.recv(1024)
     data = data.decode("utf8")
+    print(data)
     
 conn.close()
 socket.close()
